@@ -1,0 +1,20 @@
+{
+    "references": [
+        { "name": "Tosyalı" },
+        { "name": "Ceyport" },
+        { "name": "Botaş" },
+        { "name": "Meltem kimya" },
+        { "name": "Limak" },
+        { "name": "Tp" },
+        { "name": "İsdemir" },
+        { "name": "Demirçelik" },
+        { "name": "Delta" },
+        { "name": "ARS çelik konstrikson" },
+        { "name": "tekin boru" },
+        { "name": "Anadolu tech" },
+        { "name": "Özcan mühendislik" },
+        { "name": "Edip demir çelik" },
+        { "name": "Blue tech bilişim" },
+        { "name": "Sarıseki gübre" }
+    ]
+}
