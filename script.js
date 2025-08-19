@@ -1,19 +1,5 @@
-// Mobile Navigation Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+// Mobile Navigation Toggle (disabled - hamburger removed)
 const nav = document.querySelector('.nav');
-
-mobileMenuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    mobileMenuBtn.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        mobileMenuBtn.classList.remove('active');
-    });
-});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

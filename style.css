@@ -77,8 +77,6 @@ body {
 
 .mobile-menu-btn {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
 }
 
 .mobile-menu-btn span {
@@ -828,12 +826,8 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: flex;
-    }
-
     .nav {
-        display: none;
+        display: block;
     }
 
     .hero-content {
