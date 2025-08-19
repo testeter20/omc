@@ -830,6 +830,21 @@ body {
         display: block;
     }
 
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav a {
+        font-size: 0.95rem;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;

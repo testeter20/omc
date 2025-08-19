@@ -1,13 +1,17 @@
-// Mobile Navigation Toggle (disabled - hamburger removed)
-const nav = document.querySelector('.nav');
+// Mobile Navigation Toggle removed (hamburger disabled)
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links with dynamic header offset
+function getHeaderOffset() {
+    const header = document.querySelector('.header');
+    return header ? header.offsetHeight : 0;
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 80;
+            const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -23,7 +27,7 @@ function updateActiveNav() {
     
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - (getHeaderOffset() + 20);
         const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
