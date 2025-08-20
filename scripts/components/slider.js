@@ -138,12 +138,23 @@ class ReferencesSlider {
     
     createReferenceItem(reference) {
         const icon = reference.icon || 'fas fa-industry';
+        const logoHtml = reference.logo ? 
+            `<img src="${reference.logo}" alt="${reference.name}" class="reference-logo-img">` : 
+            `<i class="${icon}"></i>`;
+        
+        const linkHtml = reference.url ? 
+            `<a href="${reference.url}" target="_blank" rel="noopener noreferrer" class="reference-link">` : 
+            `<div class="reference-content">`;
+        const closingTag = reference.url ? `</a>` : `</div>`;
+        
         return `
             <div class="reference-item">
-                <div class="reference-logo">
-                    <i class="${icon}"></i>
-                    <span>${reference.name}</span>
-                </div>
+                ${linkHtml}
+                    <div class="reference-logo">
+                        ${logoHtml}
+                        <span>${reference.name}</span>
+                    </div>
+                ${closingTag}
             </div>
         `;
     }

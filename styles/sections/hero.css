@@ -144,3 +144,22 @@
         font-size: 2rem;
     }
 }
+
+/* Hero button overrides */
+.hero .btn {
+	padding: 10px 22px;
+	font-size: 0.95rem;
+	border-radius: 6px;
+}
+
+.hero .btn-primary,
+.hero .btn-outline {
+	width: auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero .hero-buttons {
+	gap: 0.5rem;
+}

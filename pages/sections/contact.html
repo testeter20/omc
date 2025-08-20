@@ -5,64 +5,72 @@
             <h2>İletişim</h2>
             <p>Projeleriniz için bizimle iletişime geçin</p>
         </div>
+        
         <div class="contact-content">
             <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-building"></i>
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>DURU MAKİNA</h3>
                     </div>
                     <div class="contact-details">
-                        <h4>DURU MAKİNA MÜHENDİSLİK TİC. LTD. ŞTİ.</h4>
+                        <div class="contact-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Yeşilköy Mah. Gülçınar Sk. Güven Petrol Yanı Dörtyol / HATAY</span>
+                        </div>
+                        <div class="contact-row">
+                            <i class="fas fa-phone"></i>
+                            <div class="phone-numbers">
+                                <span>0532 012 65 55</span>
+                                <span>0544 777 01 22</span>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <i class="fas fa-envelope"></i>
+                            <span>makinaduru@gmail.com</span>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Adres</h4>
-                        <p>Yeşilköy Mah. Gülçınar Sk. Güven Petrol Yanı Dörtyol / HATAY</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Telefon</h4>
-                        <p>0532 012 65 55<br>0544 777 01 22</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>E-posta</h4>
-                        <p>makinaduru@gmail.com</p>
-                    </div>
+                
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps?q=36.860611,36.168472&z=16&hl=tr&output=embed" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
+            
             <div class="contact-form">
-                <form>
+                <h3>Mesaj Gönder</h3>
+                <form id="contactForm" action="mailto:makinaduru@gmail.com" method="POST" enctype="text/plain" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" placeholder="Ad Soyad" required>
+                            <input id="name" name="name" type="text" placeholder="Ad Soyad" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Telefon" required>
+                            <input id="phone" name="phone" type="tel" placeholder="Telefon" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="E-posta" required>
+                        <input id="email" name="email" type="email" placeholder="E-posta" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Konu" required>
+                        <input id="subject" name="subject" type="text" placeholder="Konu" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="Mesajınız" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Gönder</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Gönder
+                    </button>
                 </form>
             </div>
         </div>

@@ -104,35 +104,54 @@ function initScrollAnimations() {
 
 // Contact form handling
 function initContactForm() {
-    const contactForm = document.querySelector('.contact-form form');
+    const contactForm = document.querySelector('#contactForm');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simple validation
-            if (!data.name || !data.email || !data.message) {
+            // Read form fields
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone || !email || !subject || !message) {
                 alert('Lütfen tüm alanları doldurun.');
                 return;
             }
-            
-            // Email validation
+
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                alert('Lütfen geçerli bir email adresi girin.');
+            if (!emailRegex.test(email)) {
+                alert('Lütfen geçerli bir e‑posta adresi girin.');
                 return;
             }
-            
-            // Here you would typically send the data to a server
-            console.log('Form data:', data);
-            alert('Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.');
-            
-            // Reset form
-            this.reset();
+
+            // Build mailto link to open default mail client with prefilled content
+            const to = 'makinaduru@gmail.com';
+            const body = [
+                `Ad Soyad: ${name}`,
+                `Telefon: ${phone}`,
+                `E-posta: ${email}`,
+                '',
+                'Mesaj:',
+                message
+            ].join('\n');
+
+            const mailtoHref = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Create a temporary anchor to trigger reliably on iOS/desktop
+            const a = document.createElement('a');
+            a.href = mailtoHref;
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => document.body.removeChild(a), 0);
+
+            // As a fallback (if handler is blocked), also set form action to the mailto and submit natively
+            contactForm.setAttribute('action', mailtoHref);
+            contactForm.submit();
         });
     }
 }

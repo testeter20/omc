@@ -17,7 +17,7 @@
 
 .references-slider {
     position: relative;
-    height: 200px;
+    height: 240px;
     overflow: hidden;
 }
 
@@ -25,18 +25,18 @@
     display: flex;
     position: absolute;
     width: max-content;
-    gap: 2rem;
-    padding: 0 1rem;
+    gap: 4rem;
+    padding: 0 2rem;
 }
 
 .slider-track-1 {
     top: 0;
-    animation: slideLeft 30s linear infinite;
+    animation: slideLeft 80s linear infinite;
 }
 
 .slider-track-2 {
-    top: 100px;
-    animation: slideRight 30s linear infinite;
+    top: 120px;
+    animation: slideRight 80s linear infinite;
 }
 
 @keyframes slideLeft {
@@ -58,20 +58,22 @@
 }
 
 .reference-item {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.9);
     padding: 1.5rem 2rem;
     border-radius: 12px;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
     min-width: 180px;
     flex-shrink: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .reference-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .reference-logo {
@@ -86,21 +88,49 @@
     color: var(--primary-color);
 }
 
+.reference-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.8);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
 .reference-logo span {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-dark);
     line-height: 1.2;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.reference-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.reference-link:hover {
+    transform: translateY(-2px);
+}
+
+.reference-link:hover .reference-logo-img {
+    filter: grayscale(0%) opacity(1);
+}
+
+.reference-content {
+    display: block;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .references-slider {
-        height: 150px;
+        height: 180px;
     }
     
     .slider-track-2 {
-        top: 75px;
+        top: 90px;
     }
     
     .reference-item {
@@ -112,7 +142,13 @@
         font-size: 1.5rem;
     }
     
+    .reference-logo-img {
+        width: 45px;
+        height: 45px;
+    }
+    
     .reference-logo span {
         font-size: 0.8rem;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 }

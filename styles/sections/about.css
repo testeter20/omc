@@ -63,6 +63,19 @@
     font-size: 0.9rem;
 }
 
+.about-image {
+    width: 100%;
+}
+
+.about-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    display: block;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-content {
