@@ -36,6 +36,7 @@ async function loadAllComponents() {
     await loadComponent('busnies-component', 'pages/sections/busnies.html');
     await loadComponent('references-component', 'pages/sections/references.html');
     await loadComponent('equipment-component', 'pages/sections/equipment.html');
+    await loadComponent('sustainability-component', 'pages/sections/sustainability.html');
     await loadComponent('contact-component', 'pages/sections/contact.html');
 
     // Dispatch event after all components are loaded so sliders can initialize safely

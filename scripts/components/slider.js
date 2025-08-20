@@ -102,27 +102,27 @@ class ReferencesSlider {
             this.references = data.references;
         } catch (error) {
             console.error('Error loading references:', error);
-            // Fallback: varsayılan referanslar
+            // Fallback: varsayılan referanslar (Remix Icon)
             this.references = [
-                { name: "BOTAŞ", icon: "fas fa-industry" },
-                { name: "Tekfen", icon: "fas fa-cogs" },
-                { name: "Rubis Terminal Petrol", icon: "fas fa-oil-can" },
-                { name: "Türkerler", icon: "fas fa-leaf" },
-                { name: "Soyak", icon: "fas fa-home" },
-                { name: "SASA", icon: "fas fa-flask" },
-                { name: "Lubpart", icon: "fas fa-tools" },
-                { name: "Atlas", icon: "fas fa-mountain" },
-                { name: "Varaka - Albayrak", icon: "fas fa-ship" },
-                { name: "Tefirom", icon: "fas fa-industry" },
-                { name: "Beştepeler Enerji", icon: "fas fa-bolt" },
-                { name: "AKSA Akrilik", icon: "fas fa-atom" },
-                { name: "Konya Şeker", icon: "fas fa-seedling" },
-                { name: "İGSAS", icon: "fas fa-industry" },
-                { name: "ASOS", icon: "fas fa-building" },
-                { name: "Toros Tarım", icon: "fas fa-tractor" },
-                { name: "Çevik Grup", icon: "fas fa-industry" },
-                { name: "Balküpü", icon: "fas fa-industry" },
-                { name: "Türk Traktör", icon: "fas fa-tractor" }
+                { name: "BOTAŞ", icon: "ri-building-2-line" },
+                { name: "Tekfen", icon: "ri-settings-3-line" },
+                { name: "Rubis Terminal Petrol", icon: "ri-oil-line" },
+                { name: "Türkerler", icon: "ri-leaf-line" },
+                { name: "Soyak", icon: "ri-home-5-line" },
+                { name: "SASA", icon: "ri-flask-line" },
+                { name: "Lubpart", icon: "ri-tools-line" },
+                { name: "Atlas", icon: "ri-landscape-line" },
+                { name: "Varaka - Albayrak", icon: "ri-ship-line" },
+                { name: "Tefirom", icon: "ri-building-line" },
+                { name: "Beştepeler Enerji", icon: "ri-flashlight-line" },
+                { name: "AKSA Akrilik", icon: "ri-atom-line" },
+                { name: "Konya Şeker", icon: "ri-seedling-line" },
+                { name: "İGSAS", icon: "ri-factory-line" },
+                { name: "ASOS", icon: "ri-community-line" },
+                { name: "Toros Tarım", icon: "ri-tractor-line" },
+                { name: "Çevik Grup", icon: "ri-factory-line" },
+                { name: "Balküpü", icon: "ri-factory-line" },
+                { name: "Türk Traktör", icon: "ri-tractor-line" }
             ];
         }
     }
@@ -137,7 +137,7 @@ class ReferencesSlider {
     }
     
     createReferenceItem(reference) {
-        const icon = reference.icon || 'fas fa-industry';
+        const icon = reference.icon || 'ri-factory-line';
         const logoHtml = reference.logo ? 
             `<img src="${reference.logo}" alt="${reference.name}" class="reference-logo-img">` : 
             `<i class="${icon}"></i>`;

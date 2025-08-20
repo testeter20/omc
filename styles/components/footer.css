@@ -69,6 +69,17 @@
     margin-left: -15px;
 }
 
+/* Phone number links styling */
+.footer-section p a[href^="tel:"] {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section p a[href^="tel:"]:hover {
+    color: var(--primary-color);
+}
+
 /* Social Media Links */
 .social-links {
     display: flex;
@@ -99,6 +110,17 @@
 
 .social-link i {
     font-size: 1.1rem;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(0) invert(1);
 }
 
 /* Responsive Design */
