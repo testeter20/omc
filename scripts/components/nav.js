@@ -1,145 +1,142 @@
-// Navigation Component JavaScript
-class Navigation {
-    constructor() {
-        this.nav = null;
-        this.mobileMenuBtn = null;
-        this.navLinks = null;
-        this.sections = null;
-        this.initialized = false;
-        
-        this.init();
-    }
+// Simple Mobile Menu Handler
+function initMobileMenu() {
+    console.log('Mobile Menu: Initializing...');
     
-    init() {
-        // Try to initialize immediately if elements exist
-        this.tryInit();
+    // Function to setup mobile menu
+    function setupMobileMenu() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('.nav');
         
-        // Also listen for components loaded event
-        document.addEventListener('components:loaded', () => {
-            this.tryInit();
+        console.log('Mobile Menu: Elements found:', {
+            mobileMenuBtn: !!mobileMenuBtn,
+            nav: !!nav
         });
-    }
-    
-    tryInit() {
-        if (this.initialized) return;
         
-        this.nav = document.querySelector('.nav');
-        this.mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        this.navLinks = document.querySelectorAll('nav a[href^="#"]');
-        this.sections = document.querySelectorAll('section[id]');
-        
-        if (this.nav && this.mobileMenuBtn) {
-            this.initMobileMenu();
-            this.initSmoothScrolling();
-            this.initActiveNavigation();
-            this.initScrollIndicator();
-            this.initialized = true;
-            console.log('Navigation initialized successfully');
-        }
-    }
-    
-    initMobileMenu() {
-        if (this.mobileMenuBtn && this.nav) {
-            // Remove existing listeners to prevent duplicates
-            this.mobileMenuBtn.removeEventListener('click', this.toggleMenu);
-            this.mobileMenuBtn.addEventListener('click', this.toggleMenu.bind(this));
+        if (mobileMenuBtn && nav) {
+            // Remove any existing listeners
+            const newMobileMenuBtn = mobileMenuBtn.cloneNode(true);
+            mobileMenuBtn.parentNode.replaceChild(newMobileMenuBtn, mobileMenuBtn);
             
-            // Close mobile menu when clicking on a link
-            this.navLinks.forEach(link => {
-                link.removeEventListener('click', this.closeMenu);
-                link.addEventListener('click', this.closeMenu.bind(this));
+            // Add click listener
+            newMobileMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Mobile Menu: Button clicked!');
+                
+                nav.classList.toggle('active');
+                newMobileMenuBtn.classList.toggle('active');
+                
+                console.log('Mobile Menu: Active state:', nav.classList.contains('active'));
             });
+            
+            // Close menu when clicking on links
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Mobile Menu: Link clicked, closing menu');
+                    nav.classList.remove('active');
+                    newMobileMenuBtn.classList.remove('active');
+                });
+            });
+            
+            console.log('Mobile Menu: Successfully initialized');
+            return true;
         }
+        
+        return false;
     }
     
-    toggleMenu() {
-        this.nav.classList.toggle('active');
-        // Add hamburger animation
-        this.mobileMenuBtn.classList.toggle('active');
-    }
-    
-    closeMenu() {
-        this.nav.classList.remove('active');
-        this.mobileMenuBtn.classList.remove('active');
-    }
-    
-    initSmoothScrolling() {
-        this.navLinks.forEach(link => {
-            link.removeEventListener('click', this.handleSmoothScroll);
-            link.addEventListener('click', this.handleSmoothScroll.bind(this));
+    // Try to setup immediately
+    if (!setupMobileMenu()) {
+        console.log('Mobile Menu: Elements not found, will retry...');
+        
+        // Retry after components are loaded
+        document.addEventListener('components:loaded', function() {
+            console.log('Mobile Menu: Components loaded, retrying...');
+            setTimeout(() => {
+                if (!setupMobileMenu()) {
+                    console.log('Mobile Menu: Still not found, final retry...');
+                    setTimeout(setupMobileMenu, 500);
+                }
+            }, 100);
         });
     }
+}
+
+// Smooth scrolling for navigation links
+function initSmoothScrolling() {
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
     
-    handleSmoothScroll(e) {
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Active navigation highlighting
+function initActiveNavigation() {
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
         
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
-    
-    initActiveNavigation() {
-        // Remove existing scroll listener to prevent duplicates
-        window.removeEventListener('scroll', this.handleScroll);
-        window.addEventListener('scroll', this.handleScroll.bind(this));
-    }
-    
-    handleScroll() {
         let current = '';
-        
-        this.sections.forEach(section => {
+        sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            
             if (pageYOffset >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
         });
-        
-        this.navLinks.forEach(link => {
+
+        navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
             }
         });
-    }
-    
-    initScrollIndicator() {
-        const scrollIndicator = document.querySelector('.scroll-indicator');
-        
-        if (scrollIndicator) {
-            scrollIndicator.removeEventListener('click', this.handleScrollIndicator);
-            scrollIndicator.addEventListener('click', this.handleScrollIndicator.bind(this));
-        }
-    }
-    
-    handleScrollIndicator() {
-        const aboutSection = document.querySelector('#about');
-        if (aboutSection) {
-            aboutSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
+    });
 }
 
-// Initialize navigation when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new Navigation();
-});
+// Initialize all navigation features
+function initAllNavigation() {
+    initMobileMenu();
+    initSmoothScrolling();
+    initActiveNavigation();
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initAllNavigation);
 
 // Also initialize when components are loaded
-document.addEventListener('components:loaded', () => {
-    // Small delay to ensure DOM is fully updated
-    setTimeout(() => {
-        if (!window.navigationInstance) {
-            window.navigationInstance = new Navigation();
-        } else {
-            window.navigationInstance.tryInit();
-        }
-    }, 100);
+document.addEventListener('components:loaded', function() {
+    setTimeout(initAllNavigation, 100);
 });
+
+// Fallback: Check every second for the first 5 seconds
+let checkCount = 0;
+const checkInterval = setInterval(function() {
+    checkCount++;
+    if (checkCount > 5) {
+        clearInterval(checkInterval);
+        return;
+    }
+    
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    
+    if (mobileMenuBtn && nav && !mobileMenuBtn.hasAttribute('data-initialized')) {
+        console.log('Mobile Menu: Found via interval check');
+        mobileMenuBtn.setAttribute('data-initialized', 'true');
+        initAllNavigation();
+        clearInterval(checkInterval);
+    }
+}, 1000);

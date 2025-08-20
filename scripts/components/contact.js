@@ -22,14 +22,7 @@
 		return true;
 	}
 
-	function handleSubmit(event) {
-		event.preventDefault();
-		var form = event.target;
-		
-		if (!validateForm(form)) {
-			return;
-		}
-		
+	function buildMailto(form) {
 		var name = form.querySelector('#name').value.trim();
 		var phone = form.querySelector('#phone').value.trim();
 		var email = form.querySelector('#email').value.trim();
@@ -39,7 +32,7 @@
 		var to = 'makinaduru@gmail.com';
 		var subjectText = '[Web İletişim] ' + subject;
 		var lines = [
-			'Gönderen: ' + name,
+			'Ad Soyad: ' + name,
 			'E-posta: ' + email,
 			'Telefon: ' + phone,
 			'',
@@ -47,33 +40,53 @@
 			message
 		];
 		var body = lines.join('\n');
-		
-		try {
-			var mailto = 'mailto:' + encodeURIComponent(to) +
-				'?subject=' + encodeURIComponent(subjectText) +
-				'&body=' + encodeURIComponent(body);
+		return 'mailto:' + to +
+			'?subject=' + encodeURIComponent(subjectText) +
+			'&body=' + encodeURIComponent(body);
+	}
 
-			// For mobile devices, try to open mail app
-			if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				// Mobile device - try to open mail app
-				window.location.href = mailto;
-			} else {
-				// Desktop - open default mail client
-				window.open(mailto, '_blank');
-			}
-			
-			// Show success message
-			setTimeout(function() {
-				alert('E-posta uygulamanız açılıyor. E-posta gönderildikten sonra formu temizlemek istiyor musunuz?');
-				if (confirm('Formu temizlemek istiyor musunuz?')) {
-					form.reset();
-				}
-			}, 1000);
-			
-		} catch (error) {
-			console.error('Mailto link error:', error);
-			alert('E-posta uygulaması açılamadı. Lütfen manuel olarak makinaduru@gmail.com adresine e-posta gönderin.');
+	function openMailClient(mailtoHref) {
+		// Preferred: use a temporary anchor click (best for iOS/desktop)
+		var a = document.createElement('a');
+		a.href = mailtoHref;
+		a.style.display = 'none';
+		document.body.appendChild(a);
+		try {
+			a.click();
+		} finally {
+			setTimeout(function() { document.body.removeChild(a); }, 0);
 		}
+
+		// Fallbacks by platform
+		var isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		if (isMobile) {
+			// On some Android builds, anchor click might not trigger; try direct navigation
+			setTimeout(function() {
+				window.location.href = mailtoHref;
+			}, 50);
+		} else {
+			// Desktop fallback: open in a new tab (some clients capture it)
+			setTimeout(function() {
+				window.open(mailtoHref, '_blank');
+			}, 50);
+		}
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		var form = event.target;
+		
+		if (!validateForm(form)) {
+			return;
+		}
+		
+		var mailtoHref = buildMailto(form);
+		openMailClient(mailtoHref);
+		
+		// Do not show blocking alerts; optionally clear the form after a short delay
+		setTimeout(function() {
+			if (form && form.reset) form.reset();
+		}, 1500);
 	}
 
 	function init() {
@@ -81,21 +94,14 @@
 		if (form) {
 			form.addEventListener('submit', handleSubmit);
 			
-			// Add input validation on blur
-			var inputs = form.querySelectorAll('input, textarea');
+			// Add input validation styles
+			var inputs = form.querySelectorAll('input[required], textarea[required]');
 			inputs.forEach(function(input) {
-				input.addEventListener('blur', function() {
-					if (this.hasAttribute('required') && !this.value.trim()) {
-						this.style.borderColor = '#ef4444';
-					} else {
-						this.style.borderColor = '';
-					}
-				});
-				
+				input.addEventListener('invalid', function() {
+					this.style.borderColor = '#ef4444';
+				}, false);
 				input.addEventListener('input', function() {
-					if (this.style.borderColor === 'rgb(239, 68, 68)') {
-						this.style.borderColor = '';
-					}
+					this.style.borderColor = '';
 				});
 			});
 		}
