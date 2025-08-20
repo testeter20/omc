@@ -67,6 +67,7 @@
     font-weight: 700;
     color: var(--primary-color);
     margin-left: -15px;
+    margin-top: 3px;
 }
 
 /* Phone number links styling */
@@ -127,6 +128,7 @@
 @media (max-width: 768px) {
     .footer-logo-text-uru {
         font-size: 1.5rem;
+        margin-top: 3px;
     }
     
     .social-links {

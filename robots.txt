@@ -1,6 +1,14 @@
 User-agent: *
 Allow: /
 
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
 # Sitemaps
 Sitemap: https://testeter20.github.io/omc/sitemap.xml
 

@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://testeter20.github.io/omc/</loc>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://testeter20.github.io/omc/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testeter20.github.io/omc/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testeter20.github.io/omc/"/>
   </url>
   <url>
     <loc>https://testeter20.github.io/omc/?lang=tr</loc>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://testeter20.github.io/omc/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testeter20.github.io/omc/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testeter20.github.io/omc/"/>
   </url>
   <url>
     <loc>https://testeter20.github.io/omc/?lang=en</loc>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://testeter20.github.io/omc/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testeter20.github.io/omc/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testeter20.github.io/omc/"/>
   </url>
 </urlset>
 

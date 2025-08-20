@@ -142,19 +142,14 @@ class ReferencesSlider {
             `<img src="${reference.logo}" alt="${reference.name}" class="reference-logo-img">` : 
             `<i class="${icon}"></i>`;
         
-        const linkHtml = reference.url ? 
-            `<a href="${reference.url}" target="_blank" rel="noopener noreferrer" class="reference-link">` : 
-            `<div class="reference-content">`;
-        const closingTag = reference.url ? `</a>` : `</div>`;
-        
         return `
             <div class="reference-item">
-                ${linkHtml}
+                <div class="reference-content">
                     <div class="reference-logo">
                         ${logoHtml}
                         <span>${reference.name}</span>
                     </div>
-                ${closingTag}
+                </div>
             </div>
         `;
     }
