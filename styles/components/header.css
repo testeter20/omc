@@ -107,6 +107,8 @@
 	display: none;
 	flex-direction: column;
 	cursor: pointer;
+	padding: 5px;
+	z-index: 1001;
 }
 
 .mobile-menu-btn span {
@@ -115,6 +117,20 @@
 	background: var(--text-dark);
 	margin: 3px 0;
 	transition: 0.3s;
+	border-radius: 2px;
+}
+
+/* Hamburger animation */
+.mobile-menu-btn.active span:nth-child(1) {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+	transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Responsive Design */
@@ -143,6 +159,7 @@
 		background: var(--white);
 		border-top: 1px solid var(--border-color);
 		padding-top: 0.5rem;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	}
 
 	.nav ul {
@@ -156,6 +173,8 @@
 
 	.nav a {
 		font-size: 0.95rem;
+		padding: 0.5rem 0;
+		display: block;
 	}
 
 	.logo h1 {
