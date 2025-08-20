@@ -13,6 +13,8 @@ on:
       - "styles/**"
       - "scripts/**"
       - "data/**"
+      - "sitemap.xml"
+      - "robots.txt"
       - ".github/workflows/static.yml"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

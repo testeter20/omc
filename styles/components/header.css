@@ -116,13 +116,23 @@
 	color: var(--text-dark);
 	font-weight: 600;
 	cursor: pointer;
-	padding: 6px 6px;
+	padding: 6px 8px;
 	border-radius: 4px;
+	transition: all 0.3s ease;
+	font-size: 0.85rem;
+}
+.lang-switch button:hover {
+	background: rgba(59, 130, 246, 0.1);
+	color: var(--primary-color);
 }
 .lang-switch button.active {
 	color: var(--primary-color);
+	background: rgba(59, 130, 246, 0.15);
 }
-.lang-switch .sep { color: #94a3b8; }
+.lang-switch .sep { 
+	color: #94a3b8; 
+	font-weight: 400;
+}
 
 .mobile-menu-btn {
 	display: none;
@@ -162,15 +172,16 @@
 
 	.header-content {
 		display: grid;
-		grid-template-columns: 1fr auto;
+		grid-template-columns: 1fr auto auto;
 		grid-template-areas:
-			"logo burger"
-			"nav nav";
+			"logo lang burger"
+			"nav nav nav";
 		align-items: center;
 		gap: 0.5rem 0.75rem;
 	}
 
 	.logo { grid-area: logo; }
+	.lang-switch { grid-area: lang; justify-self: center; }
 	.mobile-menu-btn { grid-area: burger; justify-self: end; }
 	.nav { grid-area: nav; }
 
@@ -208,6 +219,15 @@
 
 	.logo-subtitle {
 		font-size: 0.65rem;
+	}
+
+	/* Language switcher mobile adjustments */
+	.lang-switch {
+		margin-left: 0;
+	}
+	.lang-switch button {
+		padding: 8px 10px;
+		font-size: 0.9rem;
 	}
 
 	/* Show nav when active */
