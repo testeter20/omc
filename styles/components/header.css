@@ -103,6 +103,27 @@
 	border-radius: 1px;
 }
 
+/* Language switcher */
+.lang-switch {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+	margin-left: 0.75rem;
+}
+.lang-switch button {
+	background: transparent;
+	border: none;
+	color: var(--text-dark);
+	font-weight: 600;
+	cursor: pointer;
+	padding: 6px 6px;
+	border-radius: 4px;
+}
+.lang-switch button.active {
+	color: var(--primary-color);
+}
+.lang-switch .sep { color: #94a3b8; }
+
 .mobile-menu-btn {
 	display: none;
 	flex-direction: column;

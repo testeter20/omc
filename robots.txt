@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://testeter20.github.io/omc/sitemap.xml
+
+

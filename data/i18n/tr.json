@@ -1,0 +1,131 @@
+{
+	"seo": {
+		"title": "Duru Makina Mühendislik – Kumlama, Boyama, Çelik İmalat ve Montaj",
+		"description": "Endüstriyel kumlama, boyama, çelik imalat ve montaj uygulamalarında 40 yıllık deneyim. Duru Makina ile kaliteli, hızlı ve güvenilir çözümler."
+	},
+	"header": {
+		"nav": {
+			"about": "Hakkımızda",
+			"vision": "Vizyon & Misyon",
+			"references": "Referanslar",
+			"services": "Hizmetler",
+			"works": "Çalışmalar",
+			"equipment": "Ekipmanlar",
+			"sustainability": "Sürdürülebilirlik",
+			"contact": "İletişim"
+		},
+		"subtitle": "Makina Mühendislik Tic. Ltd. Şti."
+	},
+	"hero": {
+		"title": "Kumlama, Boyama ve Çelik İmalatta Profesyonel Çözümler",
+		"subtitle": "Endüstriyel tesislerde kumlama, boyama, çelik imalat ve montaj uygulamalarını, uzman ekibimizle kaliteli ve hızlı bir şekilde gerçekleştiriyoruz.",
+		"btnServices": "Hizmetlerimiz",
+		"btnContact": "İletişim",
+		"scroll": "Aşağı Kaydırın"
+	},
+	"about": {
+		"title": "Neden Duru Makina?",
+		"subtitle": "İşimiz: Kumlama, Boyama ve Çelik Endüstrisinde Çözümler",
+		"heading": "İşimiz: Kumlama, Boyama ve Çelik Endüstrisinde Çözümler",
+		"p1": "40 yıllık tecrübemizle endüstriyel yüzey hazırlama ve çelik işlerinde profesyonel hizmet veriyoruz. Kapalı ve açık alanlarda, manuel ve otomatik kumlama uygulamaları yapıyor; astar, ara kat ve son kat boya işlemleriyle dayanıklı yüzey çözümleri sunuyoruz.",
+		"p2": "Ayrıca demir-çelik sektöründe; montaj, demontaj, bakım, onarım ve tadilat çalışmalarında güvenilir ve kaliteli hizmet anlayışımızla projelerinize değer katıyoruz.",
+		"statExperience": "Yıllık Deneyim",
+		"statSatisfaction": "Müşteri Memnuniyeti"
+	},
+	"vm": {
+		"title": "Vizyon & Misyon",
+		"visionTitle": "Vizyonumuz",
+		"visionText": "Endüstriyel yüzey işlemleri ve montaj hizmetlerinde yenilikçi ve kaliteli çözümler sunarak sektörde kalıcı bir marka olmak.",
+		"missionTitle": "Misyonumuz",
+		"missionText": "Müşterilerimizin ihtiyaçlarını doğru analiz ederek, kumlama, boyama, montaj, demontaj, bakım ve tadilat işlerinde yüksek kalite ve zamanında teslim ilkesiyle hizmet vermek."
+	},
+	"services": {
+		"title": "Hizmetlerimiz",
+		"subtitle": "Endüstriyel çözümlerde uzmanlığımız",
+		"items": {
+			"paint": {
+				"title": "Kumlama & Boyama",
+				"desc": "Endüstriyel yüzey hazırlama ve uzun ömürlü boya sistemleri",
+				"li1": "Kapalı ve açık alanlarda manuel ve otomatik kumlama",
+				"li2": "Metal yüzeylerde astar, ara kat ve son kat boya uygulamaları",
+				"li3": "Shop primer ve korozyon koruma çözümleri",
+				"li4": "Endüstriyel yüzey hazırlama ve uzun ömürlü boya sistemleri"
+			},
+			"assembly": {
+				"title": "Montaj & Demontaj",
+				"desc": "Proje bazlı montaj ve demontaj çözümleri",
+				"li1": "Çelik konstrüksiyon montaj ve demontaj işleri",
+				"li2": "Tank ve çelik yapıların söküm ve yeniden montajı",
+				"li3": "Proje bazlı montaj çözümleri"
+			},
+			"maintenance": {
+				"title": "Bakım & Onarım",
+				"desc": "Dayanıklı ve güvenli çözümlerle uzun ömürlü kullanım",
+				"li1": "Tank, çelik konstrüksiyon ve endüstriyel yüzeylerde bakım çalışmaları",
+				"li2": "Tesislerde tadilat, yenileme ve onarım uygulamaları",
+				"li3": "Dayanıklı ve güvenli çözümlerle uzun ömürlü kullanım"
+			},
+			"project": {
+				"title": "Proje & Çizim Hizmetleri",
+				"desc": "İhtiyaca özel teknik çizim ve proje desteği",
+				"li1": "İhtiyaca özel teknik çizim ve proje hazırlığı",
+				"li2": "Montaj, imalat ve bakım süreçlerine yönelik proje desteği",
+				"li3": "Çözüme odaklı mühendislik yaklaşımı"
+			}
+		}
+	},
+	"references": {
+		"title": "Referanslarımız",
+		"subtitle": "Güvenilir çözüm ortağı olarak tercih edildiğimiz kurumlar"
+	},
+	"equipment": {
+		"title": "Tesis Alanları ve Ekipmanlarımız",
+		"facilities": {
+			"title": "Tesis Alanları",
+			"i1": "1500m2 kapalı alan",
+			"i2": "300m2 kapalı manuel kumlama",
+			"i3": "700m2 açık alan"
+		},
+		"gear": {
+			"title": "Ekipmanlar",
+			"i1": "3 adet seyyar kumlama makinası",
+			"i2": "1 adet otomatik kumlama makinası",
+			"i3": "Manuel kumlama atölyesi",
+			"i4": "İmalat ekipmanları"
+		}
+	},
+	"sustainability": {
+		"title": "Sürdürülebilirlik",
+		"subtitle": "Çevreye duyarlı üretim yaklaşımımız",
+		"p1": "Duru Makina olarak, tüm çalışmalarımızda çevreye duyarlı bir yaklaşımı benimsiyoruz. Endüstriyel boyama ve kumlama süreçlerimizde, iş güvenliği ve çevre mevzuatlarına uygun hareket ederek, atıkların doğru şekilde yönetilmesine özen gösteriyoruz.",
+		"p2": "Amacımız, müşterilerimize uzun ömürlü çözümler sunarken aynı zamanda doğal kaynakların korunmasına katkı sağlamak ve gelecek nesillere daha yaşanabilir bir çevre bırakmaktır."
+	},
+	"busnies": {
+		"title": "Projelerden Görseller",
+		"subtitle": "Çalışmalarımızdan seçili kareler"
+	},
+	"contact": {
+		"title": "İletişim",
+		"subtitle": "Projeleriniz için bizimle iletişime geçin",
+		"send": "Gönder",
+		"placeholders": {
+			"name": "Ad Soyad",
+			"phone": "Telefon",
+			"email": "E-posta",
+			"subject": "Konu",
+			"message": "Mesajınız"
+		}
+	},
+	"footer": {
+		"about": "Endüstriyel tesislerde kumlama, boyama, çelik imalat ve montaj uygulamalarını, uzman ekibimizle kaliteli ve hızlı bir şekilde gerçekleştiriyoruz.",
+		"servicesTitle": "Hizmetlerimiz",
+		"services": {
+			"paint": "Kumlama & Boyama",
+			"assembly": "Montaj & Demontaj",
+			"maintenance": "Bakım & Onarım",
+			"project": "Proje & Çizim Hizmetleri"
+		},
+		"contactTitle": "İletişim",
+		"copyright": "© 2025 Duru Makina Mühendislik. Tüm hakları saklıdır."
+	}
+}

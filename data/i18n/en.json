@@ -1,0 +1,131 @@
+{
+	"seo": {
+		"title": "Duru Makina Engineering – Blasting, Painting, Steel Fabrication & Assembly",
+		"description": "40 years of experience in industrial blasting, painting, steel fabrication and assembly. Quality, fast and reliable solutions with Duru Makina."
+	},
+	"header": {
+		"nav": {
+			"about": "About",
+			"vision": "Vision & Mission",
+			"references": "References",
+			"services": "Services",
+			"works": "Works",
+			"equipment": "Equipment",
+			"sustainability": "Sustainability",
+			"contact": "Contact"
+		},
+		"subtitle": "Machinery Engineering Co. Ltd."
+	},
+	"hero": {
+		"title": "Professional Solutions in Blasting, Painting and Steel Fabrication",
+		"subtitle": "We carry out blasting, painting, steel fabrication and assembly operations in industrial facilities with our expert team, delivering quality and speed.",
+		"btnServices": "Our Services",
+		"btnContact": "Contact",
+		"scroll": "Scroll Down"
+	},
+	"about": {
+		"title": "Why Duru Makina?",
+		"subtitle": "Our Business: Solutions in Blasting, Painting and Steel Industry",
+		"heading": "Our Business: Solutions in Blasting, Painting and Steel Industry",
+		"p1": "With 40 years of experience, we provide professional services in industrial surface preparation and steel works. We perform manual and automatic blasting in indoor and outdoor areas; offering durable surface solutions with primer, intermediate and top coat paint applications.",
+		"p2": "In the iron-steel industry, we add value to your projects with our reliable and quality service approach in assembly, disassembly, maintenance, repair and renovation works.",
+		"statExperience": "Years of Experience",
+		"statSatisfaction": "Customer Satisfaction"
+	},
+	"vm": {
+		"title": "Vision & Mission",
+		"visionTitle": "Our Vision",
+		"visionText": "To become a permanent brand in the sector by offering innovative and high-quality solutions in industrial surface processing and assembly services.",
+		"missionTitle": "Our Mission",
+		"missionText": "To accurately analyze our customers' needs and provide services with high quality and on-time delivery in blasting, painting, assembly, disassembly, maintenance and renovation works."
+	},
+	"services": {
+		"title": "Services",
+		"subtitle": "Our expertise in industrial solutions",
+		"items": {
+			"paint": {
+				"title": "Blasting & Painting",
+				"desc": "Industrial surface preparation and long-lasting paint systems",
+				"li1": "Manual and automatic blasting in indoor and outdoor areas",
+				"li2": "Primer, intermediate and top coat applications on metal surfaces",
+				"li3": "Shop primer and corrosion protection solutions",
+				"li4": "Industrial surface preparation and long-lasting paint systems"
+			},
+			"assembly": {
+				"title": "Assembly & Disassembly",
+				"desc": "Project-based assembly and disassembly solutions",
+				"li1": "Steel construction assembly and disassembly works",
+				"li2": "Dismantling and re-assembly of tanks and steel structures",
+				"li3": "Project-based assembly solutions"
+			},
+			"maintenance": {
+				"title": "Maintenance & Repair",
+				"desc": "Durable and safe solutions for long-term use",
+				"li1": "Maintenance works on tanks, steel constructions and industrial surfaces",
+				"li2": "Renovation and repair applications in facilities",
+				"li3": "Durable and safe solutions for long-term use"
+			},
+			"project": {
+				"title": "Project & Drawing Services",
+				"desc": "Tailored technical drawing and project support",
+				"li1": "Custom technical drawings and project preparation",
+				"li2": "Project support for assembly, manufacturing and maintenance processes",
+				"li3": "Solution-oriented engineering approach"
+			}
+		}
+	},
+	"references": {
+		"title": "References",
+		"subtitle": "Organizations that prefer us as a reliable solution partner"
+	},
+	"equipment": {
+		"title": "Facility Areas and Our Equipment",
+		"facilities": {
+			"title": "Facility Areas",
+			"i1": "1500m2 indoor area",
+			"i2": "300m2 indoor manual blasting",
+			"i3": "700m2 outdoor area"
+		},
+		"gear": {
+			"title": "Equipment",
+			"i1": "3 mobile blasting machines",
+			"i2": "1 automatic blasting machine",
+			"i3": "Manual blasting workshop",
+			"i4": "Manufacturing equipment"
+		}
+	},
+	"sustainability": {
+		"title": "Sustainability",
+		"subtitle": "Our environmentally conscious production approach",
+		"p1": "At Duru Makina, we adopt an environmentally conscious approach in all our operations. In our industrial painting and blasting processes, we comply with occupational safety and environmental regulations and ensure proper waste management.",
+		"p2": "Our goal is to provide long-lasting solutions to our customers while contributing to the conservation of natural resources and leaving a more livable environment for future generations."
+	},
+	"busnies": {
+		"title": "Images from Projects",
+		"subtitle": "Selected shots from our works"
+	},
+	"contact": {
+		"title": "Contact",
+		"subtitle": "Get in touch for your projects",
+		"send": "Send",
+		"placeholders": {
+			"name": "Full Name",
+			"phone": "Phone",
+			"email": "Email",
+			"subject": "Subject",
+			"message": "Your Message"
+		}
+	},
+	"footer": {
+		"about": "We carry out blasting, painting, steel fabrication and assembly operations in industrial facilities with our expert team, delivering quality and speed.",
+		"servicesTitle": "Services",
+		"services": {
+			"paint": "Blasting & Painting",
+			"assembly": "Assembly & Disassembly",
+			"maintenance": "Maintenance & Repair",
+			"project": "Project & Drawing Services"
+		},
+		"contactTitle": "Contact",
+		"copyright": "© 2025 Duru Makina Engineering. All rights reserved."
+	}
+}

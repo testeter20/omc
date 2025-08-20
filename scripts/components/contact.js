@@ -7,6 +7,8 @@
 		var subject = form.querySelector('#subject').value.trim();
 		var message = form.querySelector('#message').value.trim();
 		
+		console.log('Form validation - Values:', { name, phone, email, subject, message });
+		
 		if (!name || !phone || !email || !subject || !message) {
 			alert('Lütfen tüm alanları doldurun.');
 			return false;
@@ -29,6 +31,8 @@
 		var subject = form.querySelector('#subject').value.trim();
 		var message = form.querySelector('#message').value.trim();
 
+		console.log('Building mailto - Form values:', { name, phone, email, subject, message });
+
 		var to = 'makinaduru@gmail.com';
 		var subjectText = '[Web İletişim] ' + subject;
 		var lines = [
@@ -40,6 +44,9 @@
 			message
 		];
 		var body = lines.join('\n');
+		
+		console.log('Mailto body:', body);
+		
 		return 'mailto:' + to +
 			'?subject=' + encodeURIComponent(subjectText) +
 			'&body=' + encodeURIComponent(body);
@@ -52,6 +59,8 @@
 		var subject = form.querySelector('#subject').value.trim();
 		var message = form.querySelector('#message').value.trim();
 
+		console.log('Building web mail URL - Form values:', { name, phone, email, subject, message });
+
 		var to = 'makinaduru@gmail.com';
 		var subjectText = '[Web İletişim] ' + subject;
 		var body = 'Ad Soyad: ' + name + '\n' +
@@ -59,14 +68,20 @@
 				  'Telefon: ' + phone + '\n\n' +
 				  'Mesaj:\n' + message;
 
+		console.log('Web mail body:', body);
+
 		if (service === 'gmail') {
-			return 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
+			var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
 				   '&su=' + encodeURIComponent(subjectText) +
 				   '&body=' + encodeURIComponent(body);
+			console.log('Gmail URL:', url);
+			return url;
 		} else if (service === 'outlook') {
-			return 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(to) +
+			var url = 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(to) +
 				   '&subject=' + encodeURIComponent(subjectText) +
 				   '&body=' + encodeURIComponent(body);
+			console.log('Outlook URL:', url);
+			return url;
 		}
 		return '';
 	}
@@ -139,12 +154,14 @@
 
 		// Event listeners
 		document.getElementById('gmail-btn').addEventListener('click', function() {
+			console.log('Gmail button clicked');
 			var url = buildWebMailUrl('gmail', form);
 			window.open(url, '_blank');
 			document.body.removeChild(popup);
 		});
 
 		document.getElementById('outlook-btn').addEventListener('click', function() {
+			console.log('Outlook button clicked');
 			var url = buildWebMailUrl('outlook', form);
 			window.open(url, '_blank');
 			document.body.removeChild(popup);
@@ -167,6 +184,8 @@
 	}
 
 	function openMailClient(mailtoHref, form) {
+		console.log('Opening mail client, mobile device:', isMobileDevice());
+		
 		// On mobile, try mailto first
 		if (isMobileDevice()) {
 			var a = document.createElement('a');
@@ -179,6 +198,7 @@
 			// Check if mailto worked by monitoring if the page loses focus or if a timeout occurs
 			var timeout = setTimeout(function() {
 				if (!mailtoOpened) {
+					console.log('Mailto failed, showing popup');
 					showWebMailPopup(form);
 				}
 			}, 1000);
@@ -200,18 +220,23 @@
 			}
 		} else {
 			// On desktop/web, show popup directly
+			console.log('Desktop detected, showing popup directly');
 			showWebMailPopup(form);
 		}
 	}
 
 	function handleSubmit(event) {
 		event.preventDefault();
+		console.log('Form submitted');
+		
 		var form = event.target;
 		
 		if (!validateForm(form)) {
+			console.log('Form validation failed');
 			return;
 		}
 		
+		console.log('Form validation passed, building mailto');
 		var mailtoHref = buildMailto(form);
 		openMailClient(mailtoHref, form);
 		
@@ -222,8 +247,10 @@
 	}
 
 	function init() {
+		console.log('Contact form initializing...');
 		var form = document.getElementById('contactForm');
 		if (form) {
+			console.log('Contact form found, adding event listener');
 			form.addEventListener('submit', handleSubmit);
 			
 			// Add input validation styles
@@ -236,6 +263,8 @@
 					this.style.borderColor = '';
 				});
 			});
+		} else {
+			console.log('Contact form not found');
 		}
 	}
 
