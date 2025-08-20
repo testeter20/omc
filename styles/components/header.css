@@ -27,6 +27,11 @@
     object-fit: contain;
 }
 
+/* Recolor black PNG logo to brand blue in header */
+.header .logo-img {
+    filter: invert(31%) sepia(98%) saturate(2297%) hue-rotate(212deg) brightness(94%) contrast(97%);
+}
+
 .logo-text {
     display: flex;
     align-items: center;
