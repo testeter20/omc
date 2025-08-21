@@ -1,23 +1,71 @@
-// Busnies (Work) Slider - Click to pause/resume only
-(function(){
-	function initBusniesSliderControls() {
-		const wrapper = document.getElementById('busnies-slider');
-		if (!wrapper) return;
+// Image Modal Functions
+function openImageModal(imageSrc, imageAlt) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    modalImage.src = imageSrc;
+    modalImage.alt = imageAlt;
+    modal.style.display = 'block';
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+    
+    // Close modal when clicking outside the image
+    modal.onclick = function(e) {
+        if (e.target === modal) {
+            closeImageModal();
+        }
+    };
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeImageModal();
+        }
+    });
+}
 
-		let isPaused = false;
-		function pause() { if (isPaused) return; isPaused = true; wrapper.classList.add('paused'); }
-		function resume() { if (!isPaused) return; isPaused = false; wrapper.classList.remove('paused'); }
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    
+    // Restore body scroll
+    document.body.style.overflow = 'auto';
+}
 
-		// Remove hover pause; only click toggles
-		wrapper.addEventListener('click', () => { isPaused ? resume() : pause(); });
-	}
+// Initialize busnies slider functionality
+function initBusniesSlider() {
+    const slider = document.getElementById('busnies-slider');
+    
+    if (!slider) return;
+    
+    // Pause animation on hover
+    slider.addEventListener('mouseenter', function() {
+        slider.classList.add('paused');
+    });
+    
+    slider.addEventListener('mouseleave', function() {
+        slider.classList.remove('paused');
+    });
+    
+    // Pause animation on touch devices
+    slider.addEventListener('touchstart', function() {
+        slider.classList.add('paused');
+    });
+    
+    slider.addEventListener('touchend', function() {
+        setTimeout(() => {
+            slider.classList.remove('paused');
+        }, 2000);
+    });
+}
 
-	// Ensure after components are loaded
-	if (document.readyState === 'complete' || document.readyState === 'interactive') {
-		document.addEventListener('components:loaded', initBusniesSliderControls, { once: true });
-	} else {
-		document.addEventListener('DOMContentLoaded', () => {
-			document.addEventListener('components:loaded', initBusniesSliderControls, { once: true });
-		});
-	}
-})();
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initBusniesSlider();
+});
+
+// Re-initialize after components are loaded
+document.addEventListener('components:loaded', function() {
+    initBusniesSlider();
+});

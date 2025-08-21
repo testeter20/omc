@@ -38,7 +38,16 @@
 	color: inherit;
 	display: block;
 	flex-shrink: 0;
-	min-width: 200px;
+}
+
+/* Sabit boyutlu logo container - boyutu hiçbir şekilde değişmeyecek */
+.logo-container {
+	width: 280px;
+	height: 80px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	overflow: hidden;
+	position: relative;
 }
 
 .logo-text {
@@ -46,13 +55,18 @@
 	align-items: flex-end;
 	gap: 0;
 	flex-shrink: 0;
-	min-width: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .logo-text-right {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	flex-shrink: 0;
 }
 
 .logo-text-uru {
@@ -64,6 +78,7 @@
 	margin-bottom: 0;
 	margin-top: 0px;
 	flex-shrink: 0;
+	white-space: nowrap;
 }
 
 .logo-subtitle {
@@ -74,6 +89,10 @@
 	letter-spacing: 0.2px;
 	margin-left: -47px;
 	margin-top: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 200px;
 }
 
 .nav ul {
@@ -191,8 +210,16 @@
 	.logo { 
 		grid-area: logo; 
 		flex-shrink: 0;
-		min-width: 200px;
 	}
+	
+	/* Mobilde logo container boyutunu koru */
+	.logo-container {
+		width: 280px;
+		height: 80px;
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+	
 	.lang-switch { grid-area: lang; justify-self: center; }
 	.mobile-menu-btn { grid-area: burger; justify-self: end; }
 	.nav { grid-area: nav; }
