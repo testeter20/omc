@@ -6,15 +6,13 @@
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	padding: 0.125rem 0;
 }
 
 .header-content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0;
-	min-height: 82px;
+	padding: 0.25rem 0;
 }
 
 .logo h1 {
@@ -44,8 +42,8 @@
 
 /* Sabit boyutlu logo container - boyutu hiçbir şekilde değişmeyecek */
 .logo-container {
-	width: 320px;
-	height: 82px;
+	width: 280px;
+	height: 80px;
 	flex-shrink: 0;
 	flex-grow: 0;
 	overflow: hidden;
@@ -94,16 +92,13 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 240px;
+	max-width: 200px;
 }
 
 .nav ul {
 	display: flex;
 	list-style: none;
 	gap: 1.2rem;
-	align-items: center;
-	margin: 0;
-	padding: 0;
 }
 
 .nav a {
@@ -112,9 +107,6 @@
 	font-weight: 500;
 	transition: color 0.3s ease;
 	font-size: 0.9rem;
-	display: flex;
-	align-items: center;
-	white-space: nowrap;
 }
 
 .nav a:hover,
@@ -138,20 +130,11 @@
 	border-radius: 1px;
 }
 
-/* Navigation container alignment */
-.nav {
-	display: flex;
-	align-items: center;
-}
-
 /* Language switcher */
 .lang-switch {
 	display: flex;
 	align-items: center;
 	margin-left: 0.5rem;
-	flex-shrink: 0;
-	width: 60px;
-	justify-content: center;
 }
 
 #lang-toggle {
@@ -166,9 +149,8 @@
 	transition: all 0.2s ease;
 	font-size: 0.8rem;
 	line-height: 1;
-	width: 44px;
+	min-width: 44px;
 	text-align: center;
-	flex-shrink: 0;
 }
 
 #lang-toggle:hover {
@@ -242,7 +224,7 @@
 	/* Mobilde logo container boyutunu koru */
 	.logo-container {
 		width: 280px;
-		height: 82px;
+		height: 80px;
 		flex-shrink: 0;
 		flex-grow: 0;
 	}

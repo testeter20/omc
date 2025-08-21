@@ -246,17 +246,6 @@
 		setActiveLangUI(currentLang);
 		updateSeoForLang(currentLang);
 	});
-	
-	// Also re-apply when header component is specifically loaded
-	document.addEventListener('DOMContentLoaded', function() {
-		// Wait a bit for header to load, then apply translations
-		setTimeout(function() {
-			var headerComponent = document.getElementById('header-component');
-			if (headerComponent && headerComponent.children.length > 0) {
-				applyTranslations(headerComponent);
-			}
-		}, 100);
-	});
 })();
 
 

@@ -1,9 +1,16 @@
 // Simple Mobile Menu Handler
 function initMobileMenu() {
+    console.log('Mobile Menu: Initializing...');
+    
     // Function to setup mobile menu
     function setupMobileMenu() {
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const nav = document.querySelector('.nav');
+        
+        console.log('Mobile Menu: Elements found:', {
+            mobileMenuBtn: !!mobileMenuBtn,
+            nav: !!nav
+        });
         
         if (mobileMenuBtn && nav) {
             // Remove any existing listeners
@@ -14,19 +21,25 @@ function initMobileMenu() {
             newMobileMenuBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
+                console.log('Mobile Menu: Button clicked!');
                 
                 nav.classList.toggle('active');
                 newMobileMenuBtn.classList.toggle('active');
+                
+                console.log('Mobile Menu: Active state:', nav.classList.contains('active'));
             });
             
             // Close menu when clicking on links
             const navLinks = nav.querySelectorAll('a');
             navLinks.forEach(link => {
                 link.addEventListener('click', function() {
+                    console.log('Mobile Menu: Link clicked, closing menu');
                     nav.classList.remove('active');
                     newMobileMenuBtn.classList.remove('active');
                 });
             });
+            
+            console.log('Mobile Menu: Successfully initialized');
             return true;
         }
         
@@ -35,10 +48,14 @@ function initMobileMenu() {
     
     // Try to setup immediately
     if (!setupMobileMenu()) {
+        console.log('Mobile Menu: Elements not found, will retry...');
+        
         // Retry after components are loaded
         document.addEventListener('components:loaded', function() {
+            console.log('Mobile Menu: Components loaded, retrying...');
             setTimeout(() => {
                 if (!setupMobileMenu()) {
+                    console.log('Mobile Menu: Still not found, final retry...');
                     setTimeout(setupMobileMenu, 500);
                 }
             }, 100);
@@ -117,15 +134,9 @@ const checkInterval = setInterval(function() {
     const nav = document.querySelector('.nav');
     
     if (mobileMenuBtn && nav && !mobileMenuBtn.hasAttribute('data-initialized')) {
+        console.log('Mobile Menu: Found via interval check');
         mobileMenuBtn.setAttribute('data-initialized', 'true');
         initAllNavigation();
         clearInterval(checkInterval);
     }
 }, 1000);
-
-// Cleanup function to prevent memory leaks
-window.addEventListener('beforeunload', function() {
-    if (checkInterval) {
-        clearInterval(checkInterval);
-    }
-});
