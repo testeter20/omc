@@ -60,12 +60,7 @@ function initBusniesSlider() {
     });
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initBusniesSlider();
-});
-
-// Re-initialize after components are loaded
+// Initialize only once after components are loaded
 document.addEventListener('components:loaded', function() {
     initBusniesSlider();
 });

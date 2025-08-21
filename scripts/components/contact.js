@@ -232,10 +232,8 @@
 	}
 
 	function init() {
-		console.log('Contact form initializing...');
 		var form = document.getElementById('contactForm');
 		if (form) {
-			console.log('Contact form found, adding event listener');
 			form.addEventListener('submit', handleSubmit);
 			
 			// Add input validation styles
@@ -248,8 +246,6 @@
 					this.style.borderColor = '';
 				});
 			});
-		} else {
-			console.log('Contact form not found');
 		}
 	}
 

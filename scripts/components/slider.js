@@ -21,8 +21,10 @@ class Slider {
             
             // Pause on hover (for hero slider)
             if (this.container) {
-                this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
-                this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+                this.mouseEnterHandler = () => this.stopAutoPlay();
+                this.mouseLeaveHandler = () => this.startAutoPlay();
+                this.container.addEventListener('mouseenter', this.mouseEnterHandler);
+                this.container.addEventListener('mouseleave', this.mouseLeaveHandler);
             }
         }
     }
@@ -72,9 +74,9 @@ class Slider {
     
     destroy() {
         this.stopAutoPlay();
-        if (this.container) {
-            this.container.removeEventListener('mouseenter', () => this.stopAutoPlay());
-            this.container.removeEventListener('mouseleave', () => this.startAutoPlay());
+        if (this.container && this.mouseEnterHandler && this.mouseLeaveHandler) {
+            this.container.removeEventListener('mouseenter', this.mouseEnterHandler);
+            this.container.removeEventListener('mouseleave', this.mouseLeaveHandler);
         }
     }
 }
