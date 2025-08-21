@@ -1,0 +1,309 @@
+/* Header */
+.header {
+	background: var(--white);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	padding: 0.125rem 0;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	min-height: 82px;
+}
+
+.logo h1 {
+	color: var(--primary-color);
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.logo-img {
+	height: 70px;
+	width: 70px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+/* Recolor black PNG logo to brand blue in header */
+.header .logo-img {
+	filter: invert(31%) sepia(98%) saturate(2297%) hue-rotate(212deg) brightness(94%) contrast(97%);
+}
+
+.logo-link {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	flex-shrink: 0;
+}
+
+/* Sabit boyutlu logo container - boyutu hiçbir şekilde değişmeyecek */
+.logo-container {
+	width: 320px;
+	height: 82px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.logo-text {
+	display: flex;
+	align-items: flex-end;
+	gap: 0;
+	flex-shrink: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.logo-text-right {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-shrink: 0;
+}
+
+.logo-text-uru {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin-left: -17px;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-top: 0px;
+	flex-shrink: 0;
+	white-space: nowrap;
+}
+
+.logo-subtitle {
+	font-size: 0.7rem;
+	line-height: 1;
+	color: #334155;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	margin-left: -47px;
+	margin-top: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 240px;
+}
+
+.nav ul {
+	display: flex;
+	list-style: none;
+	gap: 1.2rem;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.nav a {
+	text-decoration: none;
+	color: var(--text-dark);
+	font-weight: 500;
+	transition: color 0.3s ease;
+	font-size: 0.9rem;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.nav a:hover,
+.nav a.active {
+	color: var(--primary-color);
+}
+
+.nav a.active {
+	font-weight: 600;
+	position: relative;
+}
+
+.nav a.active::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: var(--primary-color);
+	border-radius: 1px;
+}
+
+/* Navigation container alignment */
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+/* Language switcher */
+.lang-switch {
+	display: flex;
+	align-items: center;
+	margin-left: 0.5rem;
+	flex-shrink: 0;
+	width: 60px;
+	justify-content: center;
+}
+
+#lang-toggle {
+	appearance: none;
+	background: rgba(148, 163, 184, 0.15);
+	border: 1px solid rgba(148, 163, 184, 0.35);
+	color: #0f172a;
+	font-weight: 700;
+	cursor: pointer;
+	padding: 6px 10px;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+	font-size: 0.8rem;
+	line-height: 1;
+	width: 44px;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+#lang-toggle:hover {
+	background: rgba(59, 130, 246, 0.12);
+	border-color: rgba(59, 130, 246, 0.45);
+	color: var(--primary-color);
+	box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+#lang-toggle:active {
+	transform: translateY(1px);
+}
+
+.lang-switch .sep { 
+	color: #94a3b8; 
+	font-weight: 400;
+	font-size: 0.8rem;
+}
+
+.mobile-menu-btn {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	padding: 5px;
+	z-index: 1001;
+}
+
+.mobile-menu-btn span {
+	width: 25px;
+	height: 3px;
+	background: var(--text-dark);
+	margin: 3px 0;
+	transition: 0.3s;
+	border-radius: 2px;
+}
+
+/* Hamburger animation */
+.mobile-menu-btn.active span:nth-child(1) {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.mobile-menu-btn {
+		display: flex;
+	}
+
+	.header-content {
+		display: grid;
+		grid-template-columns: 1fr auto auto;
+		grid-template-areas:
+			"logo lang burger"
+			"nav nav nav";
+		align-items: center;
+		gap: 0.5rem 0.75rem;
+	}
+
+	.logo { 
+		grid-area: logo; 
+		flex-shrink: 0;
+	}
+	
+	/* Mobilde logo container boyutunu koru */
+	.logo-container {
+		width: 280px;
+		height: 82px;
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+	
+	.lang-switch { grid-area: lang; justify-self: center; }
+	.mobile-menu-btn { grid-area: burger; justify-self: end; }
+	.nav { grid-area: nav; }
+
+	.nav {
+		display: none;
+		width: 100%;
+		background: var(--white);
+		border-top: 1px solid var(--border-color);
+		padding-top: 0.5rem;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.nav ul {
+		flex-direction: column;
+		gap: 0.75rem;
+		overflow: visible;
+		white-space: normal;
+		padding-bottom: 0;
+		justify-content: flex-start;
+	}
+
+	.nav a {
+		font-size: 0.95rem;
+		padding: 0.5rem 0;
+		display: block;
+	}
+
+	.logo h1 {
+		font-size: 1.8rem;
+	}
+
+	.logo-text-uru {
+		font-size: 2.5rem;
+		margin-bottom: 0;
+		margin-left: -17px;
+		margin-top: 18px;
+		flex-shrink: 0;
+	}
+
+	.logo-subtitle {
+		font-size: 0.7rem;
+		margin-top: 2px;
+		margin-left: -47px;
+	}
+
+	/* Language switcher mobile adjustments */
+	.lang-switch {
+		margin-left: 0;
+	}
+	.lang-switch button {
+		padding: 8px 10px;
+		font-size: 0.9rem;
+	}
+
+	/* Show nav when active */
+	.nav.active {
+		display: block;
+	}
+}

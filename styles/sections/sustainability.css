@@ -1,0 +1,130 @@
+/* Sustainability Section */
+.sustainability {
+	padding: 120px 0;
+	position: relative;
+	background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.sustainability::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	background: linear-gradient(to bottom, var(--light-bg), var(--white));
+}
+
+.sustainability-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+/* Sustainability Card Box */
+.sustainability-card {
+	max-width: 900px;
+	margin: 0 auto;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	box-shadow: 0 6px 20px rgba(2, 6, 23, 0.05);
+	overflow: hidden;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	position: relative;
+}
+
+.sustainability-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 28px rgba(2, 6, 23, 0.08);
+	background: rgba(59, 130, 246, 0.12);
+	border-color: rgba(59, 130, 246, 0.3);
+}
+
+.sustainability-card-content {
+	padding: 2.5rem;
+	color: #334155;
+	font-size: 1.05rem;
+	line-height: 1.9;
+	position: relative;
+	z-index: 1;
+}
+
+.sustainability-card-content p {
+	margin-bottom: 1.5rem;
+}
+
+.sustainability-card-content p:last-child {
+	margin-bottom: 0;
+}
+
+.sustainability-intro {
+	max-width: 900px;
+	margin: 0 auto 0.5rem;
+	color: #334155;
+	font-size: 1.05rem;
+	line-height: 1.9;
+}
+
+.sustainability-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+}
+
+.s-card {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 14px;
+	padding: 1.25rem;
+	box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.s-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 12px 28px rgba(2,6,23,0.09);
+}
+
+.s-icon {
+	width: 44px;
+	height: 44px;
+	border-radius: 12px;
+	background: rgba(16, 185, 129, 0.12);
+	border: 1px solid rgba(16, 185, 129, 0.35);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 0.6rem;
+}
+
+.s-icon i { color: #10b981; font-size: 1.25rem; }
+
+.s-card h3 { font-size: 1rem; color: #0f172a; margin: 0 0 0.4rem; }
+.s-card p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+
+/* Simple reveal animation */
+.reveal { opacity: 0; transform: translateY(8px); transition: all 0.6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+	.sustainability-card-content {
+		padding: 2rem;
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.sustainability-card-content {
+		padding: 1.5rem;
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 992px) {
+	.sustainability-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+	.sustainability-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Logo ve Marka Görselleri -->
+  <url>
+    <loc>https://durumakina.com/</loc>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/brand/logo.png</image:loc>
+      <image:title>Duru Makina Mühendislik Logo</image:title>
+      <image:caption>Duru Makina Mühendislik - Endüstriyel Çözüm Ortağınız</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/brand/card.jpeg</image:loc>
+      <image:title>Duru Makina Mühendislik Kartvizit</image:title>
+      <image:caption>Duru Makina Mühendislik - Endüstriyel Kumlama, Boyama, Çelik İmalat ve Montaj</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Referans Logoları -->
+  <url>
+    <loc>https://durumakina.com/#references</loc>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/references/tosyaliholding.jpg</image:loc>
+      <image:title>Tosyalı Holding - Duru Makina Referansı</image:title>
+      <image:caption>Tosyalı Holding ile çalışmalarımız</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/references/botas.jpg</image:loc>
+      <image:title>Botaş - Duru Makina Referansı</image:title>
+      <image:caption>Botaş projelerinde hizmetlerimiz</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/references/ceyport.jpg</image:loc>
+      <image:title>Ceyport - Duru Makina Referansı</image:title>
+      <image:caption>Ceyport liman projeleri</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/references/isdemir.jpg</image:loc>
+      <image:title>İsdemir - Duru Makina Referansı</image:title>
+      <image:caption>İsdemir çelik üretim tesisleri</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/references/limak.jpg</image:loc>
+      <image:title>Limak - Duru Makina Referansı</image:title>
+      <image:caption>Limak inşaat projeleri</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Proje Görselleri -->
+  <url>
+    <loc>https://durumakina.com/#busnies</loc>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/1.jpeg</image:loc>
+      <image:title>Endüstriyel Kumlama Projesi</image:title>
+      <image:caption>Kapalı alan kumlama uygulaması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/2.jpeg</image:loc>
+      <image:title>Çelik Konstrüksiyon Montajı</image:title>
+      <image:caption>Çelik yapı montaj çalışması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/3.jpeg</image:loc>
+      <image:title>Tank Montaj Projesi</image:title>
+      <image:caption>Endüstriyel tank montajı</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/4.jpeg</image:loc>
+      <image:title>Endüstriyel Boyama Uygulaması</image:title>
+      <image:caption>Epoksi boya uygulaması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/5.jpeg</image:loc>
+      <image:title>Otomatik Kumlama Sistemi</image:title>
+      <image:caption>Otomatik kumlama makinesi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/6.jpeg</image:loc>
+      <image:title>Boru Hattı Montajı</image:title>
+      <image:caption>Endüstriyel boru hattı montajı</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/7.jpeg</image:loc>
+      <image:title>Manuel Kumlama Atölyesi</image:title>
+      <image:caption>Manuel kumlama çalışması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/8.jpeg</image:loc>
+      <image:title>Çelik Yapı İmalatı</image:title>
+      <image:caption>Çelik konstrüksiyon imalatı</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/9.jpeg</image:loc>
+      <image:title>Korozyon Koruma Uygulaması</image:title>
+      <image:caption>Korozyon koruma boya uygulaması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/busnies/10.jpeg</image:loc>
+      <image:title>Endüstriyel Yüzey Hazırlama</image:title>
+      <image:caption>Yüzey hazırlama çalışması</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Arka Plan Görselleri -->
+  <url>
+    <loc>https://durumakina.com/</loc>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/background/image.jpeg</image:loc>
+      <image:title>Duru Makina Endüstriyel Tesis</image:title>
+      <image:caption>Endüstriyel kumlama ve boyama tesisi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/background/image2.jpeg</image:loc>
+      <image:title>Çelik İmalat Atölyesi</image:title>
+      <image:caption>Çelik imalat ve montaj atölyesi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/background/image3.jpeg</image:loc>
+      <image:title>Endüstriyel Proje Sahası</image:title>
+      <image:caption>Endüstriyel proje uygulama sahası</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

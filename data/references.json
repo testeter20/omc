@@ -1,0 +1,104 @@
+{
+    "references": [
+        { 
+            "name": "Tosyalı", 
+            "logo": "assets/references/tosyaliholding.jpg",
+            "url": "https://www.tosyaliholding.com"
+        },
+        { 
+            "name": "Ceyport", 
+            "logo": "assets/references/ceyport.jpg",
+            "url": "https://www.ceyport.com.tr"
+        },
+        { 
+            "name": "Botaş", 
+            "logo": "assets/references/botas.jpg",
+            "url": "https://www.botas.gov.tr"
+        },
+        { 
+            "name": "Meltem kimya", 
+            "logo": "assets/references/meltemkimya.jpg",
+            "url": "https://www.meltemkimya.com"
+        },
+        { 
+            "name": "Limak", 
+            "logo": "assets/references/limak.jpg",
+            "url": "https://www.limak.com.tr"
+        },
+        { 
+            "name": "Tp", 
+            "logo": "assets/references/tppd.jpg",
+            "url": "https://www.tppd.com.tr"
+        },
+        { 
+            "name": "İsdemir", 
+            "logo": "assets/references/isdemir.jpg",
+            "url": "https://www.isdemir.com.tr"
+        },
+        { 
+            "name": "Demirçelik", 
+            "logo": "assets/references/demircelik.webp",
+            "url": "https://www.demircelik.com.tr"
+        },
+        { 
+            "name": "Delta", 
+            "logo": "assets/references/delta.png",
+            "url": "https://www.delta.com.tr"
+        },
+        { 
+            "name": "ARS çelik konstrikson", 
+            "logo": "assets/references/ars-celik.png",
+            "url": "https://arscelik.com.tr/"
+        },
+        { 
+            "name": "tekin boru", 
+            "logo": "assets/references/tekinboru.png",
+            "url": "https://www.tekinboru.com"
+        },
+        { 
+            "name": "Anadolu tech", 
+            "logo": "assets/references/anadolutech.jpg",
+            "url": "https://www.anadolutech.com"
+        },
+        { 
+            "name": "Özcan mühendislik", 
+            "logo": "assets/references/Özcan-mühendislik.jpg",
+            "url": "https://www.ozcanmuhendislik.com"
+        },
+        { 
+            "name": "Edip demir çelik", 
+            "logo": "assets/references/edipdemircelik.png",
+            "url": "https://www.edipdemircelik.com"
+        },
+        { 
+            "name": "Blue tech bilişim", 
+            "logo": "assets/references/bluetechbilgisayar.svg",
+            "url": "https://www.bluetechbilgisayar.com"
+        },
+        { 
+            "name": "Sarıseki gübre", 
+            "logo": "assets/references/sarisekigubre.png",
+            "url": "https://www.sarisekigubre.com"
+        },
+        { 
+            "name": "Albayrak", 
+            "logo": "assets/references/albayrak.png",
+            "url": "https://www.albayrak.com.tr"
+        },
+        { 
+            "name": "AOSB", 
+            "logo": "assets/references/aosb.jpg",
+            "url": "https://www.aosb.org.tr"
+        },
+        { 
+            "name": "Gübretaş", 
+            "logo": "assets/references/gubretas.png",
+            "url": "https://www.gubretas.com.tr"
+        },
+        { 
+            "name": "Türk Traktör", 
+            "logo": "assets/references/Türk_Traktör.png",
+            "url": "https://www.turktraktor.com.tr"
+        }
+    ]
+}

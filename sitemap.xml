@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://durumakina.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://durumakina.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durumakina.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://durumakina.com/"/>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/brand/logo.png</image:loc>
+      <image:title>Duru Makina Mühendislik Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- Türkçe Ana Sayfa -->
+  <url>
+    <loc>https://durumakina.com/?lang=tr</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://durumakina.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durumakina.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://durumakina.com/"/>
+  </url>
+
+  <!-- İngilizce Ana Sayfa -->
+  <url>
+    <loc>https://durumakina.com/?lang=en</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://durumakina.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durumakina.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://durumakina.com/"/>
+  </url>
+
+  <!-- Hizmetler Bölümü -->
+  <url>
+    <loc>https://durumakina.com/#services</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Endüstriyel Kumlama ve Boyama -->
+  <url>
+    <loc>https://durumakina.com/#services-paint</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Çelik İmalat ve Montaj -->
+  <url>
+    <loc>https://durumakina.com/#services-assembly</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Bakım ve Onarım -->
+  <url>
+    <loc>https://durumakina.com/#services-maintenance</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Proje ve Çizim Hizmetleri -->
+  <url>
+    <loc>https://durumakina.com/#services-project</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Referanslar -->
+  <url>
+    <loc>https://durumakina.com/#references</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Hakkımızda -->
+  <url>
+    <loc>https://durumakina.com/#about</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Vizyon ve Misyon -->
+  <url>
+    <loc>https://durumakina.com/#vision-mission</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Ekipmanlar -->
+  <url>
+    <loc>https://durumakina.com/#equipment</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Sürdürülebilirlik -->
+  <url>
+    <loc>https://durumakina.com/#sustainability</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Projeler -->
+  <url>
+    <loc>https://durumakina.com/#busnies</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- İletişim -->
+  <url>
+    <loc>https://durumakina.com/#contact</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Önemli Görseller -->
+  <url>
+    <loc>https://durumakina.com/assets/brand/logo.png</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/brand/logo.png</image:loc>
+      <image:title>Duru Makina Mühendislik Logo</image:title>
+      <image:caption>Duru Makina Mühendislik - Endüstriyel Çözüm Ortağınız</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://durumakina.com/assets/brand/card.jpeg</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://durumakina.com/assets/brand/card.jpeg</image:loc>
+      <image:title>Duru Makina Mühendislik Kartvizit</image:title>
+      <image:caption>Duru Makina Mühendislik - Endüstriyel Kumlama, Boyama, Çelik İmalat ve Montaj</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
+
+

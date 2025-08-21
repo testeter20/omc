@@ -1,0 +1,153 @@
+/* References Section */
+.references {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.references::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--light-bg), var(--white));
+}
+
+.references-slider {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    position: absolute;
+    width: max-content;
+    gap: 4rem;
+    padding: 0 2rem;
+}
+
+.slider-track-1 {
+    top: 0;
+    animation: slideLeft 80s linear infinite;
+}
+
+.slider-track-2 {
+    top: 120px;
+    animation: slideRight 80s linear infinite;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.reference-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 180px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.reference-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+	background: rgba(255, 255, 255, 0.95);
+	border-color: rgba(0, 0, 0, 0.1);
+}
+
+.reference-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.reference-logo i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.reference-item:hover .reference-logo i {
+    color: #1d4ed8;
+}
+
+.reference-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.8);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.reference-logo span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.2;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.reference-content {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.reference-item:hover .reference-logo-img {
+    filter: grayscale(0%) opacity(1);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .references-slider {
+        height: 180px;
+    }
+    
+    .slider-track-2 {
+        top: 90px;
+    }
+    
+    .reference-item {
+        min-width: 140px;
+        padding: 1rem 1.5rem;
+    }
+    
+    .reference-logo i {
+        font-size: 1.5rem;
+    }
+    
+    .reference-logo-img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .reference-logo span {
+        font-size: 0.8rem;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+}

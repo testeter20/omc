@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /components/
+Disallow: /data/
+
+# Allow important assets
+Allow: /assets/
+Allow: /assets/brand/
+Allow: /assets/references/
+Allow: /assets/busnies/
+Allow: /assets/background/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://durumakina.com/sitemap.xml
+
+# Additional sitemaps for different content types
+Sitemap: https://durumakina.com/sitemap-images.xml
+
+# Host directive for canonical domain
+Host: https://durumakina.com
+
+# Google specific directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing specific directives
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex specific directives
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+
