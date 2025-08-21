@@ -14,6 +14,11 @@ async function loadComponent(elementId, componentPath) {
         const element = document.getElementById(elementId);
         if (element) {
             element.innerHTML = content;
+            
+            // Apply i18n translations immediately after header loads
+            if (elementId === 'header-component' && window.i18n) {
+                window.i18n.applyTranslations(element);
+            }
         } else {
             console.error(`Element with id '${elementId}' not found`);
         }
