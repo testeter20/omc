@@ -23,8 +23,9 @@
 
 .logo-img {
 	height: 70px;
-	width: auto;
+	width: 70px;
 	object-fit: contain;
+	flex-shrink: 0;
 }
 
 /* Recolor black PNG logo to brand blue in header */
@@ -36,12 +37,16 @@
 	text-decoration: none;
 	color: inherit;
 	display: block;
+	flex-shrink: 0;
+	min-width: 200px;
 }
 
 .logo-text {
 	display: flex;
 	align-items: flex-end;
 	gap: 0;
+	flex-shrink: 0;
+	min-width: 200px;
 }
 
 .logo-text-right {
@@ -57,7 +62,8 @@
 	margin-left: -17px;
 	line-height: 1;
 	margin-bottom: 0;
-	margin-top: 8px;
+	margin-top: 18px;
+	flex-shrink: 0;
 }
 
 .logo-subtitle {
@@ -182,7 +188,11 @@
 		gap: 0.5rem 0.75rem;
 	}
 
-	.logo { grid-area: logo; }
+	.logo { 
+		grid-area: logo; 
+		flex-shrink: 0;
+		min-width: 200px;
+	}
 	.lang-switch { grid-area: lang; justify-self: center; }
 	.mobile-menu-btn { grid-area: burger; justify-self: end; }
 	.nav { grid-area: nav; }
@@ -212,20 +222,21 @@
 	}
 
 	.logo h1 {
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 	}
 
 	.logo-text-uru {
-		font-size: 1.8rem;
+		font-size: 2.5rem;
 		margin-bottom: 0;
-		margin-left: -20px;
-		margin-top: 8px;
+		margin-left: -17px;
+		margin-top: 18px;
+		flex-shrink: 0;
 	}
 
 	.logo-subtitle {
-		font-size: 0.65rem;
+		font-size: 0.7rem;
 		margin-top: 2px;
-		margin-left: -32px;
+		margin-left: -42px;
 	}
 
 	/* Language switcher mobile adjustments */

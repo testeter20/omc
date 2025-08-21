@@ -87,96 +87,81 @@
 	}
 
 	function showWebMailPopup(form) {
-		var popup = document.createElement('div');
-		popup.style.cssText = `
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0,0,0,0.5);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			z-index: 10000;
-		`;
+		var overlay = document.createElement('div');
+		overlay.className = 'modal-overlay';
+		overlay.setAttribute('role', 'dialog');
+		overlay.setAttribute('aria-modal', 'true');
 
 		var content = document.createElement('div');
-		content.style.cssText = `
-			background: white;
-			padding: 30px;
-			border-radius: 10px;
-			text-align: center;
-			max-width: 400px;
-			width: 90%;
-			box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-		`;
-
+		content.className = 'email-modal';
+		content.setAttribute('role', 'document');
 		content.innerHTML = `
-			<h3 style="margin: 0 0 20px 0; color: #333;">E-posta Uygulaması Seçin</h3>
-			<p style="margin: 0 0 25px 0; color: #666;">Hangi e-posta servisini kullanmak istiyorsunuz?</p>
-			<div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-				<button id="gmail-btn" style="
-					background: #ea4335;
-					color: white;
-					border: none;
-					padding: 12px 24px;
-					border-radius: 6px;
-					cursor: pointer;
-					font-size: 14px;
-					font-weight: 500;
-				">Gmail</button>
-				<button id="outlook-btn" style="
-					background: #0078d4;
-					color: white;
-					border: none;
-					padding: 12px 24px;
-					border-radius: 6px;
-					cursor: pointer;
-					font-size: 14px;
-					font-weight: 500;
-				">Outlook</button>
+			<h3 id="email-modal-title" class="email-modal__title">E-posta Uygulaması Seçin</h3>
+			<p class="email-modal__subtitle">Hangi e-posta servisini kullanmak istiyorsunuz?</p>
+			<div class="email-modal__services">
+				<button id="gmail-btn" class="email-modal__btn email-modal__btn--gmail">
+					<i class="ri-google-fill email-modal__icon" aria-hidden="true"></i>
+					<span>Gmail</span>
+				</button>
+				<button id="outlook-btn" class="email-modal__btn email-modal__btn--outlook">
+					<i class="ri-microsoft-fill email-modal__icon" aria-hidden="true"></i>
+					<span>Outlook</span>
+				</button>
 			</div>
-			<button id="cancel-btn" style="
-				background: #6b7280;
-				color: white;
-				border: none;
-				padding: 10px 20px;
-				border-radius: 6px;
-				cursor: pointer;
-				margin-top: 20px;
-				font-size: 14px;
-			">İptal</button>
+			<button id="cancel-btn" class="email-modal__close">İptal</button>
 		`;
 
-		popup.appendChild(content);
-		document.body.appendChild(popup);
+		overlay.appendChild(content);
+		document.body.appendChild(overlay);
+
+		function closeModal() {
+			if (overlay && overlay.parentNode) {
+				overlay.parentNode.removeChild(overlay);
+			}
+			document.removeEventListener('keydown', onKeyDown);
+		}
+
+		function onKeyDown(e) {
+			if (e.key === 'Escape') {
+				closeModal();
+			}
+		}
 
 		// Event listeners
 		document.getElementById('gmail-btn').addEventListener('click', function() {
-			console.log('Gmail button clicked');
 			var url = buildWebMailUrl('gmail', form);
 			window.open(url, '_blank');
-			document.body.removeChild(popup);
+			closeModal();
 		});
 
 		document.getElementById('outlook-btn').addEventListener('click', function() {
-			console.log('Outlook button clicked');
 			var url = buildWebMailUrl('outlook', form);
 			window.open(url, '_blank');
-			document.body.removeChild(popup);
+			closeModal();
 		});
 
 		document.getElementById('cancel-btn').addEventListener('click', function() {
-			document.body.removeChild(popup);
+			closeModal();
 		});
 
 		// Close on outside click
-		popup.addEventListener('click', function(e) {
-			if (e.target === popup) {
-				document.body.removeChild(popup);
+		overlay.addEventListener('click', function(e) {
+			if (e.target === overlay) {
+				closeModal();
 			}
 		});
+
+		// Prevent clicks inside content from closing
+		content.addEventListener('click', function(e) {
+			e.stopPropagation();
+		});
+
+		// Focus first action
+		var firstBtn = document.getElementById('gmail-btn');
+		if (firstBtn) firstBtn.focus();
+
+		// Keyboard handling
+		document.addEventListener('keydown', onKeyDown);
 	}
 
 	function isMobileDevice() {

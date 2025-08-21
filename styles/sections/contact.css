@@ -257,3 +257,104 @@
         font-size: 1.2rem;
     }
 }
+
+/* Email Modal */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.55);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+	backdrop-filter: blur(2px);
+}
+
+.email-modal {
+	background: var(--white);
+	border-radius: 16px;
+	padding: 24px;
+	width: 92%;
+	max-width: 440px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18), 0 0 30px rgba(59, 130, 246, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	animation: modalIn 180ms ease-out;
+	text-align: center;
+}
+
+@keyframes modalIn {
+	from { transform: translateY(8px); opacity: 0; }
+	to { transform: translateY(0); opacity: 1; }
+}
+
+.email-modal__title {
+	margin: 0 0 8px 0;
+	color: #0f172a;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.email-modal__subtitle {
+	margin: 0 0 18px 0;
+	color: #475569;
+	font-size: 0.95rem;
+}
+
+.email-modal__services {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	margin-bottom: 14px;
+}
+
+.email-modal__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	border: none;
+	border-radius: 10px;
+	padding: 12px 16px;
+	cursor: pointer;
+	font-size: 0.95rem;
+	font-weight: 600;
+	transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+	color: var(--white);
+}
+
+.email-modal__btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.email-modal__btn--gmail {
+	background: linear-gradient(135deg, #ea4335, #d93025);
+}
+
+.email-modal__btn--outlook {
+	background: linear-gradient(135deg, #0078d4, #0a66c2);
+}
+
+.email-modal__icon {
+	font-size: 1.1rem;
+}
+
+.email-modal__close {
+	margin-top: 10px;
+	background: #e5e7eb;
+	color: #111827;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	font-weight: 600;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.email-modal__close:hover {
+	background: #d1d5db;
+}

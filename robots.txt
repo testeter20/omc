@@ -10,6 +10,6 @@ Disallow: /.git/
 Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://testeter20.github.io/omc/sitemap.xml
+Sitemap: https://durumakina.com/sitemap.xml
 
 
