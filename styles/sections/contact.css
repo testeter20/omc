@@ -34,9 +34,9 @@
 
 .contact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 40px rgba(255, 193, 7, 0.4);
-    background: rgba(255, 255, 0, 0.03);
-    border-color: rgba(255, 193, 7, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 40px rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.04);
+    border-color: rgba(59, 130, 246, 0.2);
 }
 
 .contact-header {
@@ -152,9 +152,9 @@
 
 .contact-form:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 40px rgba(255, 193, 7, 0.4);
-    background: rgba(255, 255, 0, 0.03);
-    border-color: rgba(255, 193, 7, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 40px rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.04);
+    border-color: rgba(59, 130, 246, 0.2);
 }
 
 .contact-form h3 {
