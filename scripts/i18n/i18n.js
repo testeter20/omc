@@ -181,12 +181,11 @@
 	function setActiveLangUI(lang) {
 		var html = document.documentElement;
 		html.setAttribute('lang', lang);
-		// Minimal toggle button shows the opposite language label
-		var toggle = document.getElementById('lang-toggle');
-		if (toggle) {
-			toggle.textContent = lang === 'tr' ? 'EN' : 'TR';
-			toggle.setAttribute('aria-label', 'Change language to ' + (lang === 'tr' ? 'English' : 'Turkish'));
-		}
+		var buttons = document.querySelectorAll('.lang-switch [data-lang]');
+		buttons.forEach(function (btn) {
+			if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+			else btn.classList.remove('active');
+		});
 	}
 
 	function setLanguage(lang) {
@@ -215,13 +214,13 @@
 		applyTranslations: applyTranslations
 	};
 
-	// Toggle button click -> set opposite language
+	// Event delegation for language switch
 	document.addEventListener('click', function (e) {
-		var btn = e.target.closest('#lang-toggle');
-		if (btn) {
+		var target = e.target.closest('.lang-switch [data-lang]');
+		if (target) {
 			e.preventDefault();
-			var next = (currentLang === 'tr') ? 'en' : 'tr';
-			setLanguage(next);
+			var lang = target.getAttribute('data-lang');
+			setLanguage(lang);
 		}
 	});
 
