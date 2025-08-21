@@ -7,7 +7,7 @@
 		var subject = form.querySelector('#subject').value.trim();
 		var message = form.querySelector('#message').value.trim();
 		
-		console.log('Form validation - Values:', { name, phone, email, subject, message });
+
 		
 		if (!name || !phone || !email || !subject || !message) {
 			alert('Lütfen tüm alanları doldurun.');
@@ -31,7 +31,7 @@
 		var subject = form.querySelector('#subject').value.trim();
 		var message = form.querySelector('#message').value.trim();
 
-		console.log('Building mailto - Form values:', { name, phone, email, subject, message });
+
 
 		var to = 'makinaduru@gmail.com';
 		var subjectText = '[Web İletişim] ' + subject;
@@ -45,7 +45,7 @@
 		];
 		var body = lines.join('\n');
 		
-		console.log('Mailto body:', body);
+
 		
 		return 'mailto:' + to +
 			'?subject=' + encodeURIComponent(subjectText) +
@@ -59,7 +59,7 @@
 		var subject = form.querySelector('#subject').value.trim();
 		var message = form.querySelector('#message').value.trim();
 
-		console.log('Building web mail URL - Form values:', { name, phone, email, subject, message });
+
 
 		var to = 'makinaduru@gmail.com';
 		var subjectText = '[Web İletişim] ' + subject;
@@ -68,19 +68,19 @@
 				  'Telefon: ' + phone + '\n\n' +
 				  'Mesaj:\n' + message;
 
-		console.log('Web mail body:', body);
+
 
 		if (service === 'gmail') {
 			var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
 				   '&su=' + encodeURIComponent(subjectText) +
 				   '&body=' + encodeURIComponent(body);
-			console.log('Gmail URL:', url);
+
 			return url;
 		} else if (service === 'outlook') {
 			var url = 'https://outlook.live.com/mail/0/deeplink/compose?to=' + encodeURIComponent(to) +
 				   '&subject=' + encodeURIComponent(subjectText) +
 				   '&body=' + encodeURIComponent(body);
-			console.log('Outlook URL:', url);
+
 			return url;
 		}
 		return '';
@@ -169,7 +169,6 @@
 	}
 
 	function openMailClient(mailtoHref, form) {
-		console.log('Opening mail client, mobile device:', isMobileDevice());
 		
 		// On mobile, try mailto first
 		if (isMobileDevice()) {
@@ -183,7 +182,6 @@
 			// Check if mailto worked by monitoring if the page loses focus or if a timeout occurs
 			var timeout = setTimeout(function() {
 				if (!mailtoOpened) {
-					console.log('Mailto failed, showing popup');
 					showWebMailPopup(form);
 				}
 			}, 1000);
@@ -205,23 +203,18 @@
 			}
 		} else {
 			// On desktop/web, show popup directly
-			console.log('Desktop detected, showing popup directly');
 			showWebMailPopup(form);
 		}
 	}
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		console.log('Form submitted');
 		
 		var form = event.target;
 		
 		if (!validateForm(form)) {
-			console.log('Form validation failed');
 			return;
 		}
-		
-		console.log('Form validation passed, building mailto');
 		var mailtoHref = buildMailto(form);
 		openMailClient(mailtoHref, form);
 		

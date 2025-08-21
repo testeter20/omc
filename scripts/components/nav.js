@@ -6,6 +6,11 @@ function initMobileMenu() {
         const nav = document.querySelector('.nav');
         
         if (mobileMenuBtn && nav) {
+            // Check if already initialized
+            if (mobileMenuBtn.hasAttribute('data-initialized')) {
+                return true;
+            }
+            
             // Remove any existing listeners
             const newMobileMenuBtn = mobileMenuBtn.cloneNode(true);
             mobileMenuBtn.parentNode.replaceChild(newMobileMenuBtn, mobileMenuBtn);
@@ -27,6 +32,9 @@ function initMobileMenu() {
                     newMobileMenuBtn.classList.remove('active');
                 });
             });
+            
+            // Mark as initialized
+            newMobileMenuBtn.setAttribute('data-initialized', 'true');
             return true;
         }
         

@@ -46,6 +46,12 @@
     padding-top: 1rem;
     text-align: center;
     color: #94a3b8;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* Fixed-size footer logo box */
@@ -138,6 +144,28 @@
     filter: brightness(0) invert(1);
 }
 
+.designer-credit {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin: 0;
+    opacity: 0.8;
+    text-align: right;
+}
+
+.designer-credit a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.designer-credit a:hover {
+    color: var(--primary-color);
+    opacity: 1;
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-logo-text-uru {
@@ -147,5 +175,16 @@
     
     .social-links {
         justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .designer-credit {
+        text-align: center;
+        font-size: 0.7rem;
     }
 }

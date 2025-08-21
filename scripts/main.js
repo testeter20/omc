@@ -1,3 +1,8 @@
+// 
+// Main JavaScript designed by @glitchidea
+// GitHub: https://github.com/glitchidea
+// Cybersecurity Expert & Web Developer
+//
 // Main JavaScript File
 document.addEventListener('DOMContentLoaded', function() {
     // Wait for components to be loaded before initializing
