@@ -134,31 +134,40 @@
 .lang-switch {
 	display: flex;
 	align-items: center;
-	gap: 0.25rem;
-	margin-left: 0.75rem;
+	margin-left: 0.5rem;
 }
-.lang-switch button {
-	background: transparent;
-	border: none;
-	color: var(--text-dark);
-	font-weight: 600;
+
+#lang-toggle {
+	appearance: none;
+	background: rgba(148, 163, 184, 0.15);
+	border: 1px solid rgba(148, 163, 184, 0.35);
+	color: #0f172a;
+	font-weight: 700;
 	cursor: pointer;
-	padding: 6px 8px;
-	border-radius: 4px;
-	transition: all 0.3s ease;
-	font-size: 0.85rem;
+	padding: 6px 10px;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+	font-size: 0.8rem;
+	line-height: 1;
+	min-width: 44px;
+	text-align: center;
 }
-.lang-switch button:hover {
-	background: rgba(59, 130, 246, 0.1);
+
+#lang-toggle:hover {
+	background: rgba(59, 130, 246, 0.12);
+	border-color: rgba(59, 130, 246, 0.45);
 	color: var(--primary-color);
+	box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
 }
-.lang-switch button.active {
-	color: var(--primary-color);
-	background: rgba(59, 130, 246, 0.15);
+
+#lang-toggle:active {
+	transform: translateY(1px);
 }
+
 .lang-switch .sep { 
 	color: #94a3b8; 
 	font-weight: 400;
+	font-size: 0.8rem;
 }
 
 .mobile-menu-btn {
