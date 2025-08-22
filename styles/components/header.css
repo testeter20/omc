@@ -7,6 +7,7 @@
 	width: 100%;
 	z-index: 1000;
 	padding: 0.125rem 0;
+	overflow: visible;
 }
 
 .header-content {
@@ -200,6 +201,7 @@
 	cursor: pointer;
 	padding: 5px;
 	z-index: 1001;
+	position: relative;
 }
 
 .mobile-menu-btn span {
@@ -209,6 +211,7 @@
 	margin: 3px 0;
 	transition: 0.3s;
 	border-radius: 2px;
+	display: block;
 }
 
 /* Hamburger animation */
@@ -318,5 +321,146 @@
 	/* Show nav when active */
 	.nav.active {
 		display: block;
+	}
+}
+
+/* Extra small screens */
+@media (max-width: 768px) {
+	.header-content {
+		grid-template-columns: 1fr auto auto;
+		gap: 0.25rem 0.5rem;
+	}
+	
+	.logo-container {
+		width: 280px;
+		height: 82px;
+	}
+	
+	.mobile-menu-btn {
+		z-index: 1002;
+		padding: 8px;
+	}
+	
+	.mobile-menu-btn span {
+		width: 22px;
+		height: 2px;
+	}
+}
+
+/* iPhone 12, 13, 14 and similar devices (390px) */
+@media (max-width: 390px) {
+	.header-content {
+		grid-template-columns: 1fr auto auto;
+		gap: 0.3rem 0.4rem;
+		padding: 0 12px;
+	}
+	
+	.logo-container {
+		width: 240px;
+		height: 75px;
+	}
+	
+	.logo-text-uru {
+		font-size: 2.2rem;
+		margin-left: -14px;
+		margin-top: 16px;
+	}
+	
+	.logo-subtitle {
+		font-size: 0.65rem;
+		margin-left: -40px;
+	}
+	
+	.mobile-menu-btn {
+		z-index: 1002;
+		padding: 7px;
+	}
+	
+	.mobile-menu-btn span {
+		width: 21px;
+		height: 2px;
+		margin: 2.5px 0;
+	}
+	
+	.lang-switch {
+		width: 55px;
+	}
+	
+	#lang-toggle {
+		padding: 7px 9px;
+		font-size: 0.8rem;
+		width: 42px;
+	}
+	
+	.nav {
+		padding-top: 0.8rem;
+	}
+	
+	.nav ul {
+		gap: 0.6rem;
+	}
+	
+	.nav a {
+		font-size: 0.92rem;
+		padding: 0.45rem 0;
+	}
+}
+
+/* iPhone SE and small mobile devices (375px and below) */
+@media (max-width: 375px) {
+	.header-content {
+		grid-template-columns: 1fr auto auto;
+		gap: 0.2rem 0.3rem;
+		padding: 0 10px;
+	}
+	
+	.logo-container {
+		width: 220px;
+		height: 70px;
+	}
+	
+	.logo-text-uru {
+		font-size: 2rem;
+		margin-left: -12px;
+		margin-top: 15px;
+	}
+	
+	.logo-subtitle {
+		font-size: 0.6rem;
+		margin-left: -35px;
+	}
+	
+	.mobile-menu-btn {
+		z-index: 1002;
+		padding: 6px;
+	}
+	
+	.mobile-menu-btn span {
+		width: 20px;
+		height: 2px;
+		margin: 2px 0;
+	}
+	
+	.lang-switch {
+		width: 50px;
+	}
+	
+	#lang-toggle {
+		padding: 6px 8px;
+		font-size: 0.75rem;
+		width: 40px;
+	}
+	
+	.nav {
+		padding-top: 0.75rem;
+	}
+	
+	.nav ul {
+		gap: 0.5rem;
+	}
+	
+	.nav a {
+		font-size: 0.9rem;
+		padding: 0.4rem 0;
 	}
 }
