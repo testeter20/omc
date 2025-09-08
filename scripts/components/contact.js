@@ -7,17 +7,15 @@
 		var subject = form.querySelector('#subject').value.trim();
 		var message = form.querySelector('#message').value.trim();
 		
-
-		
 		if (!name || !phone || !email || !subject || !message) {
-			alert('Lütfen tüm alanları doldurun.');
+			showStatusMessage(form, 'error', 'Lütfen tüm alanları doldurun.');
 			return false;
 		}
 		
 		// Basic email validation
 		var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!emailRegex.test(email)) {
-			alert('Lütfen geçerli bir e-posta adresi girin.');
+			showStatusMessage(form, 'error', 'Lütfen geçerli bir e-posta adresi girin.');
 			return false;
 		}
 		
