@@ -5,6 +5,7 @@
   <!-- Logo ve Marka Görselleri -->
   <url>
     <loc>https://durumakina.com/</loc>
+    <lastmod>2025-01-28</lastmod>
     <image:image>
       <image:loc>https://durumakina.com/assets/brand/logo.png</image:loc>
       <image:title>Duru Makina Mühendislik Logo</image:title>
@@ -20,6 +21,7 @@
   <!-- Referans Logoları -->
   <url>
     <loc>https://durumakina.com/#references</loc>
+    <lastmod>2025-01-28</lastmod>
     <image:image>
       <image:loc>https://durumakina.com/assets/references/tosyaliholding.jpg</image:loc>
       <image:title>Tosyalı Holding - Duru Makina Referansı</image:title>
@@ -50,6 +52,7 @@
   <!-- Proje Görselleri -->
   <url>
     <loc>https://durumakina.com/#busnies</loc>
+    <lastmod>2025-01-28</lastmod>
     <image:image>
       <image:loc>https://durumakina.com/assets/busnies/1.jpeg</image:loc>
       <image:title>Endüstriyel Kumlama Projesi</image:title>
@@ -105,6 +108,7 @@
   <!-- Arka Plan Görselleri -->
   <url>
     <loc>https://durumakina.com/</loc>
+    <lastmod>2025-01-28</lastmod>
     <image:image>
       <image:loc>https://durumakina.com/assets/background/image.jpeg</image:loc>
       <image:title>Duru Makina Endüstriyel Tesis</image:title>
